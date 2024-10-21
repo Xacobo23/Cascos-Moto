@@ -1,8 +1,6 @@
 body{
-  display: flex;
-  flex-direction: column;
+  overflow: auto;
 }
-
 header {
   height: 10%;
   display: flex;
@@ -16,6 +14,7 @@ header {
 
 #headerTop {
   margin: 40px;
+  margin-top: 20px;
   margin-bottom: 0;
   display: flex;
   flex-direction: row;
@@ -88,15 +87,15 @@ button {
 }
 
 #centro {
-  height: 70%;
   display: flex;
   margin: 50px;
 }
 
 #divNav {
   width: 30%;
-  height: 600px;
+  height: 800px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -108,7 +107,7 @@ button {
 }
 
 #divSection {
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,12 +117,20 @@ button {
 section {
 
   width: 100%;
-  height: 600px;
-
+  height: 800px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  overflow-y: scroll;
+  overflow-y: visible ;
   overflow-x: hidden;
+}
+
+main{
+  display: flex;
+  justify-content: space-around;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 article {
@@ -161,23 +168,38 @@ p {
   justify-content: space-around;
 }
 
-
+section>article{
+  border-style: solid;
+  border-radius:20px ;
+  display: flex;
+  justify-content: space-around;
+  height: 350px;
+  margin-top:20px;
+  
+}
+article>img{
+  margin-top: 10px;
+  
+}
+article>img.oferta{
+  border-style:solid; 
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom-width: 2px;
+  border-color: red;
+}
 
 
 nav {
   display: flex;
   flex-direction: column;
-  grid-template-columns: 1fr;
   width: fit-content;
-  overflow-y: scroll;
   overflow-x: hidden;
-  height: 100%;
+  height: 600px;
   align-items: center;
 }
 
-body {
-  overflow: hidden;
-}
 
 nav article {
 
@@ -190,4 +212,9 @@ footer {
   background-color: black;
   width: 100%;
   height: 200px;
+}
+
+#filtro{
+  height: 200px;
+  width: 100%;
 }
