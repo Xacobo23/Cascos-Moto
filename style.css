@@ -196,7 +196,7 @@ nav {
   flex-direction: column;
   width: fit-content;
   overflow-x: hidden;
-  height: 600px;
+  height: 550px;
   align-items: center;
 }
 
@@ -215,6 +215,107 @@ footer {
 }
 
 #filtro{
-  height: 200px;
+  height: 250px;
   width: 100%;
 }
+
+
+
+.filter-container {
+  width: 300px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-toggle {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.switch input {
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.brand-list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.brand-list label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-options button {
+  margin: 5px 5px 0 0;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.size-options button:hover {
+  background-color: #e0e0e0;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.black { background-color: black; }
+.white { background-color: white; border: 1px solid #ddd; }
+.red { background-color: red; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+.orange { background-color: orange; }
+.green { background-color: green; }
+.pink { background-color: pink; }
+.brown { background-color: brown; }
+.gray { background-color: gray; }
+.silver { background-color: silver; }
+.beige { background-color: beige; }

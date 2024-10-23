@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="filter-toggle">Mostrar filtros</button>
+
+    <div class="filter-container hidden">
+
+        <div class="filter-section">
+            <h3>En stock</h3>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+                <span>En stock</span>
+            </label>
+        </div>
+
+        <div class="filter-section">
+            <h3>Ofertas actuales</h3>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+                <span>Ofertas</span>
+            </label>
+            
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+                <span>Novedades</span>
+            </label>
+        </div>
+
+        <div class="filter-section">
+            <h3>Marca</h3>
+            <input type="text" placeholder="Buscar marca" class="search-input">
+            <div class="brand-list">
+                <label><input type="checkbox"> Agv</label>
+                <label><input type="checkbox"> Arai</label>
+                <label><input type="checkbox"> Dexter</label>
+                <label><input type="checkbox"> Hjc</label>
+                <label><input type="checkbox"> Kyt</label>
+                <label><input type="checkbox"> Ls2</label>
+                <label><input type="checkbox"> Mt helmets</label>
+                <label><input type="checkbox"> Nexx</label>
+                <label><input type="checkbox"> Nolan</label>
+                <label><input type="checkbox"> Scorpion exo</label>
+                <label><input type="checkbox"> Shark</label>
+                <label><input type="checkbox"> Shoei</label>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h3>Talla</h3>
+            <div class="size-options">
+                <button>3XS</button>
+                <button>2XS</button>
+                <button>XS</button>
+                <button>S</button>
+                <button>M</button>
+                <button>L</button>
+                <button>XL</button>
+                <button>2XL</button>
+                <button>3XL</button>
+                <button>4XL</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h3>Color</h3>
+            <div class="color-options">
+                <span class="color black"></span>
+                <span class="color white"></span>
+                <span class="color red"></span>
+                <span class="color blue"></span>
+                <span class="color yellow"></span>
+                <span class="color orange"></span>
+                <span class="color green"></span>
+                <span class="color pink"></span>
+                <span class="color brown"></span>
+                <span class="color gray"></span>
+                <span class="color silver"></span>
+                <span class="color beige"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+
+
+
+
+.filter-container {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-toggle {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.switch input {
+    margin-right: 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.brand-list {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.brand-list label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.size-options button {
+    margin: 5px 5px 0 0;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.size-options button:hover {
+    background-color: #e0e0e0;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.black { background-color: black; }
+.white { background-color: white; border: 1px solid #ddd; }
+.red { background-color: red; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+.orange { background-color: orange; }
+.green { background-color: green; }
+.pink { background-color: pink; }
+.brown { background-color: brown; }
+.gray { background-color: gray; }
+.silver { background-color: silver; }
+.beige { background-color: beige; }
+</style>
+
+<script>
+    // Selecciona el botón de toggle y el contenedor de los filtros
+    const filterToggleBtn = document.querySelector('.filter-toggle');
+    const filterContainer = document.querySelector('.filter-container');
+
+    // Agrega un evento para escuchar cuando se hace clic en el botón
+    filterToggleBtn.addEventListener('click', () => {
+        // Alterna la visibilidad de los filtros usando la clase 'hidden'
+        filterContainer.classList.toggle('hidden');
+
+        // Cambia el texto del botón si los filtros están ocultos o visibles
+        if (filterContainer.classList.contains('hidden')) {
+            filterToggleBtn.textContent = 'Mostrar filtros'; // Cambia el texto del botón
+        } else {
+            filterToggleBtn.textContent = 'Ocultar filtros'; // Cambia el texto del botón
+        }
+    });
+</script>
+
+
