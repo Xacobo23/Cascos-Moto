@@ -14,7 +14,7 @@
 
     <header>
         <div id="headerTop">
-            <img id="logo" src="img/estrella.webp" alt="logo">
+            <img id="logo" src="img/logo.webp" alt="logo">
             <fieldset id="buscador">
                 <input type="text">
                 <button id="btnLupa">
@@ -28,13 +28,26 @@
             </div>
 
         </div>
-        <fieldset id="headerBottom">
-            <button>Inicio</button>
-            <button>Acerca de</button>
-            <button>Contacto</button>
-            <button>Ofertas</button>
-            <button>Productos</button>
-        </fieldset>
+        <div id="divHeaderBottom">
+            <div id="leftleft"></div>
+            <div id="left"></div>
+
+            <div id="todo">
+                <div class="back"></div>
+                <fieldset id="headerBottom">
+                    <button>Inicio</button>
+                    <button>Acerca de</button>
+                    <button>Contacto</button>
+                    <button>Ofertas</button>
+                    <button>Productos</button>
+                </fieldset>
+            </div>
+
+            <div id="right">
+                <div class="back"></div>
+                <div id="rightright"></div>
+            </div>
+        </div>
     </header>
 
     <main id="centro">
@@ -122,22 +135,32 @@
                     </div>
                 </div>
             </div>
-            <nav>
+            <nav class="navOpcion">
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <h4>SHOEI</h4>
-
+                    <img id="imgArticle" src="img/accesorios.svg" alt="">
+                    <h4>Accesorios</h4>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <h4>SHOEI</h4>
-
+                    <img id="imgArticle" src="img/offroad.svg" alt="">
+                    <h4>Offroad</h4>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <h4>SHOEI</h4>
-
+                    <img id="imgArticle" src="img/modulares.svg" alt="">
+                    <h4>Modulares</h4>
                 </article>
+
+                <article>
+                    <img id="imgArticle" src="img/integrales.svg" alt="">
+                    <h4>Integrales</h4>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/jet.svg" alt="">
+                    <h4>Jet</h4>
+                </article>
+
             </nav>
         </div>
         <div id="divSection">
@@ -275,7 +298,74 @@
 
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ACERCA DE NOSOTROS</h4>
+                <ul>
+                    <li><a href="#">Somos "Empresa" </a></li>
+                    <li><a href="#">Afiliación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>NUESTRA PROMOCIÓN</h4>
+                <ul>
+                    <li><a href="#">Tarjetas regalo</a></li>
+                    <li><a href="#">Código promocional</a></li>
+                    <li><a href="#">Apadrinamiento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>AYUDA Y CONSEJOS</h4>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Guías de compra</a></li>
+                    <li><a href="#">Seguimiento de mi pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>CONDICIONES DE VENTA</h4>
+                <ul>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Condiciones legales</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+
+            <div id="pagosSeguros">
+                <h4>PAGOS SEGUROS</h4>
+                <div class="payment-icons">
+                    <img src="img/visa-logo.jpg" id="footerVisa" alt="Visa">
+                    <img src="img/mastercard-logo.png" id="footerMastercard" alt="MasterCard">
+                    <img src="img/paypal-logo.jpg" id="footerPaypal" alt="PayPal">
+                    <img src="img/applepay-logo.svg" id="footerApplepay" alt="Apple Pay">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="logo-section">
+                <img src="img/file.png" alt="Logo">
+            </div>
+        </div>
+        <div id="footerIconos">
+            <a href="http://facebook.com" id="facebook" class="footer_a">
+                <img class="footerIconoImg" id="facebookImg" src="/img/facebook-logo.png" alt="facebook">
+            </a>
+            <a href="http://instagram.com" id="instagram" class="footer_a">
+                <img class="footerIconoImg" id="instagramImg" src="/img/instagram-logo.svg" alt="instagram">
+            </a>
+            <a href="http://telegram.com" id="telegram" class="footer_a">
+                <img class="footerIconoImg" id="telegramImg" src="/img/telegram-logo.svg" alt="telegram">
+            </a>
+        </div>
+    </footer>
 
 </body>
 
@@ -286,6 +376,7 @@
     // Selecciona el botón de toggle y el contenedor de los filtros
     const filterToggleBtn = document.querySelector('.filter-toggle');
     const filterContainer = document.querySelector('.filter-container');
+    const navOpcion = document.querySelector('.navOpcion')
 
     // Agrega un evento para escuchar cuando se hace clic en el botón
     filterToggleBtn.addEventListener('click', () => {
@@ -298,5 +389,6 @@
         } else {
             filterToggleBtn.textContent = 'Ocultar filtros'; // Cambia el texto del botón
         }
+        navOpcion.classList.toggle('hidden');
     });
 </script>
