@@ -14,26 +14,36 @@
 
     <header>
         <div id="headerTop">
-            <img id="logo" src="img/logo.webp" alt="logo">
+            <div id="parteLogo">
+                <img id="logo" src="img/logo.jpg" alt="logo">
+                <h3 style="color: #ffffff;">motocasco</h3>
+            </div>
             <fieldset id="buscador">
                 <input type="text">
                 <button id="btnLupa">
-                    <img id="lupa" src="img/lupa.webp" alt="lupa">
+                    <img id="lupa" src="img/lupa.svg" alt="lupa">
                 </button>
             </fieldset>
             <div id="simbolitos">
-                <img id="simbolito" src="img/carrito.png" alt="carrito">
-                <img id="simbolito" src="img/estrella.webp" alt="favoritos">
-                <img id="simbolito" src="img/user.png" alt="usuario">
+                <a href="#"> <img id="simbolito" src="img/carrito.png" alt="carrito"></a>
+                <a href="#"><img id="simbolito" src="img/favorito.png" alt="favoritos"></a>
+                <a href="#"><img id="simbolito" src="img/user.png" alt="usuario"></a>
             </div>
 
         </div>
         <div id="divHeaderBottom">
-            <div id="leftleft"></div>
-            <div id="left"></div>
+            <div id="left">
+                <div class="back">
+                    <div id="leftTop"></div>
+                    <div id="leftBottom"></div>
+                </div>
+            </div>
 
             <div id="todo">
-                <div class="back"></div>
+                <div class="backTodo">
+                    <div id="backTop"></div>
+                    <div id="backBottom"></div>
+                </div>
                 <fieldset id="headerBottom">
                     <button>Inicio</button>
                     <button>Acerca de</button>
@@ -44,134 +54,243 @@
             </div>
 
             <div id="right">
-                <div class="back"></div>
-                <div id="rightright"></div>
+                <div class="back">
+                    <div id="rightTop"></div>
+                    <div id="rightBottom"></div>
+                </div>
             </div>
         </div>
     </header>
 
     <main id="centro">
         <div id="divNav">
-            <div id="filtro">
-                <button class="filter-toggle">Mostrar filtros</button>
+                <div id="filtro">
+                    <button class="filter-toggle">Mostrar filtros</button>
 
-                <div class="filter-container hidden">
+                    <div class="filter-container hidden">
 
-                    <div class="filter-section">
-                        <h3>En stock</h3>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                            <span>En stock</span>
-                        </label>
-                    </div>
-
-                    <div class="filter-section">
-                        <h3>Ofertas actuales</h3>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                            <span>Ofertas</span>
-                        </label>
-
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider"></span>
-                            <span>Novedades</span>
-                        </label>
-                    </div>
-
-                    <div class="filter-section">
-                        <h3>Marca</h3>
-                        <input type="text" placeholder="Buscar marca" class="search-input">
-                        <div class="brand-list">
-                            <label><input type="checkbox"> Agv</label>
-                            <label><input type="checkbox"> Arai</label>
-                            <label><input type="checkbox"> Dexter</label>
-                            <label><input type="checkbox"> Hjc</label>
-                            <label><input type="checkbox"> Kyt</label>
-                            <label><input type="checkbox"> Ls2</label>
-                            <label><input type="checkbox"> Mt helmets</label>
-                            <label><input type="checkbox"> Nexx</label>
-                            <label><input type="checkbox"> Nolan</label>
-                            <label><input type="checkbox"> Scorpion exo</label>
-                            <label><input type="checkbox"> Shark</label>
-                            <label><input type="checkbox"> Shoei</label>
+                        <div class="filter-section">
+                            <h3>En stock</h3>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                                <span>En stock</span>
+                            </label>
                         </div>
-                    </div>
 
-                    <div class="filter-section">
-                        <h3>Talla</h3>
-                        <div class="size-options">
-                            <button>3XS</button>
-                            <button>2XS</button>
-                            <button>XS</button>
-                            <button>S</button>
-                            <button>M</button>
-                            <button>L</button>
-                            <button>XL</button>
-                            <button>2XL</button>
-                            <button>3XL</button>
-                            <button>4XL</button>
+                        <hr>
+
+                        <div class="filter-section">
+                            <h3>Ofertas actuales</h3>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                                <span>Ofertas</span>
+                            </label>
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                                <span>Novedades</span>
+                            </label>
                         </div>
-                    </div>
 
-                    <div class="filter-section">
-                        <h3>Color</h3>
-                        <div class="color-options">
-                            <span class="color black"></span>
-                            <span class="color white"></span>
-                            <span class="color red"></span>
-                            <span class="color blue"></span>
-                            <span class="color yellow"></span>
-                            <span class="color orange"></span>
-                            <span class="color green"></span>
-                            <span class="color pink"></span>
-                            <span class="color brown"></span>
-                            <span class="color gray"></span>
-                            <span class="color silver"></span>
-                            <span class="color beige"></span>
+                        <hr>
+
+
+                        <div class="filter-section">
+                            <h3>Marca</h3>
+                            <input type="text" placeholder="Buscar marca" class="search-input">
+                            <div class="brand-list">
+                                <label><input type="checkbox"> Agv</label>
+                                <label><input type="checkbox"> Arai</label>
+                                <label><input type="checkbox"> Dexter</label>
+                                <label><input type="checkbox"> Hjc</label>
+                                <label><input type="checkbox"> Kyt</label>
+                                <label><input type="checkbox"> Ls2</label>
+                                <label><input type="checkbox"> Mt helmets</label>
+                                <label><input type="checkbox"> Nexx</label>
+                                <label><input type="checkbox"> Nolan</label>
+                                <label><input type="checkbox"> Scorpion exo</label>
+                                <label><input type="checkbox"> Shark</label>
+                                <label><input type="checkbox"> Shoei</label>
+                            </div>
+                        </div>
+
+                        <hr>
+
+
+                        <div class="filter-section">
+                            <h3>Talla</h3>
+                            <div id="size-container">
+                                <div class="size-button">3XS</div>
+                                <div class="size-button">2XS</div>
+                                <div class="size-button">XS</div>
+                                <div class="size-button">S</div>
+                                <div class="size-button">M</div>
+                                <div class="size-button">L</div>
+                                <div class="size-button">XL</div>
+                                <div class="size-button">2XL</div>
+                                <div class="size-button">3XL</div>
+                                <div class="size-button">4XL</div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+
+                        <div class="filter-section">
+                            <h3>Color</h3>
+                            <div id="color-container">
+                                <div class="color" style="background-color: black;"></div>
+                                <div class="color" style="background-color: white;"></div>
+                                <div class="color" style="background-color: red;"></div>
+                                <div class="color" style="background-color: blue;"></div>
+                                <div class="color" style="background-color: yellow;"></div>
+                                <div class="color" style="background-color: orange;"></div>
+                                <div class="color" style="background-color: green;"></div>
+                                <div class="color" style="background-color: pink;"></div>
+                                <div class="color" style="background-color: brown;"></div>
+                                <div class="color" style="background-color: gray;"></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
-            <nav class="navOpcion">
-                <article>
-                    <img id="imgArticle" src="img/accesorios.svg" alt="">
-                    <h4>Accesorios</h4>
-                </article>
+                <nav class="navOpcion">
+                    <article>
+                        <img id="imgArticle" src="img/accesorios.svg" alt="">
+                        <h4>Accesorios</h4>
+                    </article>
+                    <hr>
+                    <article>
+                        <img id="imgArticle" src="img/offroad.svg" alt="">
+                        <h4>Offroad</h4>
+                    </article>
+                    <hr>
+                    <article>
+                        <img id="imgArticle" src="img/modulares.svg" alt="">
+                        <h4>Modulares</h4>
+                    </article>
+                    <hr>
+                    <article>
+                        <img id="imgArticle" src="img/integrales.svg" alt="">
+                        <h4>Integrales</h4>
+                    </article>
+                    <hr>
+                    <article>
+                        <img id="imgArticle" src="img/jet.svg" alt="">
+                        <h4>Jet</h4>
+                    </article>
 
-                <article>
-                    <img id="imgArticle" src="img/offroad.svg" alt="">
-                    <h4>Offroad</h4>
-                </article>
-
-                <article>
-                    <img id="imgArticle" src="img/modulares.svg" alt="">
-                    <h4>Modulares</h4>
-                </article>
-
-                <article>
-                    <img id="imgArticle" src="img/integrales.svg" alt="">
-                    <h4>Integrales</h4>
-                </article>
-
-                <article>
-                    <img id="imgArticle" src="img/jet.svg" alt="">
-                    <h4>Jet</h4>
-                </article>
-
-            </nav>
+                </nav>
         </div>
         <div id="divSection">
             <section>
-                <article>
-                    <div>
-                        <img id="imgArticle" class="oferta" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg"
-                            alt="">
-                        <p id="oferta">OFERTA</p>
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
-                    <div>
+                </article>
+
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
                         <h4>SHOEI</h4>
                         <p id="descripcion">GT-AIR 2 - TESSERACT</p>
                         <div id="precioIva">
@@ -182,8 +301,8 @@
                 </article>
 
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <div>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
                         <h4>SHOEI</h4>
                         <p id="descripcion">GT-AIR 2 - TESSERACT</p>
                         <div id="precioIva">
@@ -192,9 +311,10 @@
                         </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <div>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
                         <h4>SHOEI</h4>
                         <p id="descripcion">GT-AIR 2 - TESSERACT</p>
                         <div id="precioIva">
@@ -203,94 +323,456 @@
                         </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
-                <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
-                <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
+
                 <article>
-                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="">
-                    <p id="oferta">OFERTA</p>
-                    <h4>SHOEI</h4>
-                    <p id="descripcion">GT-AIR 2 - TESSERACT</p>
-                    <div id="precioIva">
-                        <p id="precio">399,00 €</p>
-                        <p id="iva">IVA incluido</p>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="oferta">
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <p id="oferta">
+                        O<br />
+                        F<br />
+                        E<br />
+                        R<br />
+                        T<br />
+                        A<br />
+                    </p>
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <img id="imgArticle" src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="casco">
+                    <div class="info">
+                        <h4>SHOEI</h4>
+                        <p id="descripcion">GT-AIR 2 - TESSERACT</p>
+                        <div id="precioIva">
+                            <p id="precio">399,00 €</p>
+                            <p id="iva">IVA incluido</p>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -373,22 +855,37 @@
 
 
 <script>
-    // Selecciona el botón de toggle y el contenedor de los filtros
     const filterToggleBtn = document.querySelector('.filter-toggle');
     const filterContainer = document.querySelector('.filter-container');
     const navOpcion = document.querySelector('.navOpcion')
 
-    // Agrega un evento para escuchar cuando se hace clic en el botón
     filterToggleBtn.addEventListener('click', () => {
-        // Alterna la visibilidad de los filtros usando la clase 'hidden'
         filterContainer.classList.toggle('hidden');
 
-        // Cambia el texto del botón si los filtros están ocultos o visibles
         if (filterContainer.classList.contains('hidden')) {
-            filterToggleBtn.textContent = 'Mostrar filtros'; // Cambia el texto del botón
+            filterToggleBtn.textContent = 'Mostrar filtros';
         } else {
-            filterToggleBtn.textContent = 'Ocultar filtros'; // Cambia el texto del botón
+            filterToggleBtn.textContent = 'Ocultar filtros';
         }
         navOpcion.classList.toggle('hidden');
+    });
+
+    const colors = document.querySelectorAll('.color');
+
+    colors.forEach(color => {
+        color.addEventListener('click', function () {
+            // Eliminar la clase 'selected' de cualquier color previamente seleccionado
+            colors.forEach(c => c.classList.remove('selected'));
+            // Añadir la clase 'selected' al color que fue clickeado
+            this.classList.add('selected');
+        });
+    });
+    const sizeButtons = document.querySelectorAll('.size-button');
+
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Alternar la clase 'selected' para el botón actual
+            this.classList.toggle('selectedTalla');
+        });
     });
 </script>
