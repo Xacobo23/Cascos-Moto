@@ -26,7 +26,7 @@
             </fieldset>
             <div id="simbolitos">
                 <a href="#"> <img id="simbolito" src="img/carrito.png" alt="carrito"></a>
-                <a href="#"><img id="simbolito" src="img/favorito.png" alt="favoritos"></a>
+                <a href="#"><img id="simbolito" src="img/favoritos.png" alt="favoritos"></a>
                 <a href="#"><img id="simbolito" src="img/user.png" alt="usuario"></a>
             </div>
 
@@ -44,13 +44,15 @@
                     <div id="backTop"></div>
                     <div id="backBottom"></div>
                 </div>
-                <fieldset id="headerBottom">
-                    <button>Inicio</button>
-                    <button>Acerca de</button>
-                    <button>Contacto</button>
-                    <button>Ofertas</button>
-                    <button>Productos</button>
-                </fieldset>
+                <div id="botones">
+                    <fieldset id="headerBottom">
+                        <button>Inicio</button>
+                        <button>Acerca de</button>
+                        <button>Contacto</button>
+                        <button>Ofertas</button>
+                        <button>Productos</button>
+                    </fieldset>
+                </div>
             </div>
 
             <div id="right">
@@ -64,126 +66,126 @@
 
     <main id="centro">
         <div id="divNav">
-                <div id="filtro">
-                    <button class="filter-toggle">Mostrar filtros</button>
+            <div id="filtro">
+                <button class="filter-toggle">Mostrar filtros</button>
 
-                    <div class="filter-container hidden">
+                <div class="filter-container hidden">
 
-                        <div class="filter-section">
-                            <h3>En stock</h3>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                                <span>En stock</span>
-                            </label>
-                        </div>
+                    <div class="filter-section">
+                        <h3>En stock</h3>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span>En stock</span>
+                        </label>
+                    </div>
 
-                        <hr>
+                    <hr>
 
-                        <div class="filter-section">
-                            <h3>Ofertas actuales</h3>
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                                <span>Ofertas</span>
-                            </label>
+                    <div class="filter-section">
+                        <h3>Ofertas actuales</h3>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span>Ofertas</span>
+                        </label>
 
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider"></span>
-                                <span>Novedades</span>
-                            </label>
-                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            <span>Novedades</span>
+                        </label>
+                    </div>
 
-                        <hr>
-
-
-                        <div class="filter-section">
-                            <h3>Marca</h3>
-                            <input type="text" placeholder="Buscar marca" class="search-input">
-                            <div class="brand-list">
-                                <label><input type="checkbox"> Agv</label>
-                                <label><input type="checkbox"> Arai</label>
-                                <label><input type="checkbox"> Dexter</label>
-                                <label><input type="checkbox"> Hjc</label>
-                                <label><input type="checkbox"> Kyt</label>
-                                <label><input type="checkbox"> Ls2</label>
-                                <label><input type="checkbox"> Mt helmets</label>
-                                <label><input type="checkbox"> Nexx</label>
-                                <label><input type="checkbox"> Nolan</label>
-                                <label><input type="checkbox"> Scorpion exo</label>
-                                <label><input type="checkbox"> Shark</label>
-                                <label><input type="checkbox"> Shoei</label>
-                            </div>
-                        </div>
-
-                        <hr>
+                    <hr>
 
 
-                        <div class="filter-section">
-                            <h3>Talla</h3>
-                            <div id="size-container">
-                                <div class="size-button">3XS</div>
-                                <div class="size-button">2XS</div>
-                                <div class="size-button">XS</div>
-                                <div class="size-button">S</div>
-                                <div class="size-button">M</div>
-                                <div class="size-button">L</div>
-                                <div class="size-button">XL</div>
-                                <div class="size-button">2XL</div>
-                                <div class="size-button">3XL</div>
-                                <div class="size-button">4XL</div>
-                            </div>
-                        </div>
-
-                        <hr>
-
-
-                        <div class="filter-section">
-                            <h3>Color</h3>
-                            <div id="color-container">
-                                <div class="color" style="background-color: black;"></div>
-                                <div class="color" style="background-color: white;"></div>
-                                <div class="color" style="background-color: red;"></div>
-                                <div class="color" style="background-color: blue;"></div>
-                                <div class="color" style="background-color: yellow;"></div>
-                                <div class="color" style="background-color: orange;"></div>
-                                <div class="color" style="background-color: green;"></div>
-                                <div class="color" style="background-color: pink;"></div>
-                                <div class="color" style="background-color: brown;"></div>
-                                <div class="color" style="background-color: gray;"></div>
-                            </div>
-
+                    <div class="filter-section">
+                        <h3>Marca</h3>
+                        <input type="text" placeholder="Buscar marca" class="search-input">
+                        <div class="brand-list">
+                            <label><input type="checkbox"> Agv</label>
+                            <label><input type="checkbox"> Arai</label>
+                            <label><input type="checkbox"> Dexter</label>
+                            <label><input type="checkbox"> Hjc</label>
+                            <label><input type="checkbox"> Kyt</label>
+                            <label><input type="checkbox"> Ls2</label>
+                            <label><input type="checkbox"> Mt helmets</label>
+                            <label><input type="checkbox"> Nexx</label>
+                            <label><input type="checkbox"> Nolan</label>
+                            <label><input type="checkbox"> Scorpion exo</label>
+                            <label><input type="checkbox"> Shark</label>
+                            <label><input type="checkbox"> Shoei</label>
                         </div>
                     </div>
-                </div>
-                <nav class="navOpcion">
-                    <article>
-                        <img id="imgArticle" src="img/accesorios.svg" alt="">
-                        <h4>Accesorios</h4>
-                    </article>
-                    <hr>
-                    <article>
-                        <img id="imgArticle" src="img/offroad.svg" alt="">
-                        <h4>Offroad</h4>
-                    </article>
-                    <hr>
-                    <article>
-                        <img id="imgArticle" src="img/modulares.svg" alt="">
-                        <h4>Modulares</h4>
-                    </article>
-                    <hr>
-                    <article>
-                        <img id="imgArticle" src="img/integrales.svg" alt="">
-                        <h4>Integrales</h4>
-                    </article>
-                    <hr>
-                    <article>
-                        <img id="imgArticle" src="img/jet.svg" alt="">
-                        <h4>Jet</h4>
-                    </article>
 
-                </nav>
+                    <hr>
+
+
+                    <div class="filter-section">
+                        <h3>Talla</h3>
+                        <div id="size-container">
+                            <div class="size-button">3XS</div>
+                            <div class="size-button">2XS</div>
+                            <div class="size-button">XS</div>
+                            <div class="size-button">S</div>
+                            <div class="size-button">M</div>
+                            <div class="size-button">L</div>
+                            <div class="size-button">XL</div>
+                            <div class="size-button">2XL</div>
+                            <div class="size-button">3XL</div>
+                            <div class="size-button">4XL</div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+
+                    <div class="filter-section">
+                        <h3>Color</h3>
+                        <div id="color-container">
+                            <div class="color" style="background-color: black;"></div>
+                            <div class="color" style="background-color: white;"></div>
+                            <div class="color" style="background-color: red;"></div>
+                            <div class="color" style="background-color: blue;"></div>
+                            <div class="color" style="background-color: yellow;"></div>
+                            <div class="color" style="background-color: orange;"></div>
+                            <div class="color" style="background-color: green;"></div>
+                            <div class="color" style="background-color: pink;"></div>
+                            <div class="color" style="background-color: brown;"></div>
+                            <div class="color" style="background-color: gray;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <nav class="navOpcion">
+                <article>
+                    <img id="imgArticle" src="img/accesorios.svg" alt="">
+                    <h4>Accesorios</h4>
+                </article>
+                <hr>
+                <article>
+                    <img id="imgArticle" src="img/offroad.svg" alt="">
+                    <h4>Offroad</h4>
+                </article>
+                <hr>
+                <article>
+                    <img id="imgArticle" src="img/modulares.svg" alt="">
+                    <h4>Modulares</h4>
+                </article>
+                <hr>
+                <article>
+                    <img id="imgArticle" src="img/integrales.svg" alt="">
+                    <h4>Integrales</h4>
+                </article>
+                <hr>
+                <article>
+                    <img id="imgArticle" src="img/jet.svg" alt="">
+                    <h4>Jet</h4>
+                </article>
+
+            </nav>
         </div>
         <div id="divSection">
             <section>

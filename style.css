@@ -44,6 +44,7 @@ fieldset {
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
   position: relative;
+  
 
 }
 
@@ -128,15 +129,18 @@ fieldset {
 }
 
 
-
+#botones{
+  display: flex;
+  justify-content: center;
+}
 
 #divHeaderBottom {
   display: flex;
 }
 
 #simbolito {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-left: 30px;
 }
 
@@ -443,16 +447,26 @@ nav article:hover {
   transition: transform 0.3s;
 }
 
+nav article {
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
 nav article img {
   width: 100px;
   height: 100px;
 }
 
 section article:hover {
-
   transform: scale(1.08);
   transition: transform 0.3s;
 }
+
+section article {
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
 
 
 
@@ -677,7 +691,7 @@ body {
 }
 
 .footer_a:hover {
-  background-color: blueviolet;
+  background-color: #E05840 ;
 }
 
 #footerIconos {
