@@ -138,11 +138,35 @@ fieldset {
   display: flex;
 }
 
-#simbolito {
+.simbolito {
+  width: 40px;
+  height: 40px;
+  margin-left: 40px;
+  background-color: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+
+.simbolito:hover {
+  transition: 0.3s;
+  background-color: #E05840;
+}
+
+#carrito{
   width: 30px;
   height: 30px;
-  margin-left: 30px;
 }
+#fav{
+  width: 30px;
+  height: 30px;
+}
+#user{
+  width: 30px;
+  height: 30px;
+}
+
 
 #headerTop {
   width: 100%;
@@ -862,4 +886,54 @@ footer {
 @font-face {
   font-family: speed;
   src: url(facon/Facon.ttf);
+}
+
+
+
+/* Estilos generales para los modales */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 50px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  right: 100px;
+  transform: translateX(-50%);
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+/* Estilo para el triángulo debajo del modal */
+.modal::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+/* Especificación de posición para cada modal */
+#carritoModal {
+  top: 60px;
+}
+
+#favoritosModal {
+  top: 60px;
+}
+
+#usuarioModal {
+  top: 60px;
+}
+
+/* Efecto para mostrar el modal solo al pasar el ratón */
+
+
+.modal-content h2 {
+  margin-top: 0;
 }
