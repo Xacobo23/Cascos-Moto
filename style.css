@@ -138,6 +138,14 @@ fieldset {
   display: flex;
 }
 
+#divHeaderBottom button {
+  transition: 0.2s;
+}
+
+#divHeaderBottom button:hover {
+  transition: 0.2s;
+}
+
 .simbolito {
   width: 40px;
   height: 40px;
@@ -368,6 +376,7 @@ article {
 
 article h4 {
   font-family: Helvetica, sans-serif;
+  letter-spacing: 0.25em;
   text-align: center;
   font-weight: 500;
 
@@ -528,10 +537,13 @@ section article {
 
   font-family: Montserrat;
 font-weight: 500;
+transition: 0.3s;
+
 }
 .filter-toggle:hover{
   background-color: #E05840;
   color: white;
+  transition: 0.3s;
 }
 
 #filtro>img {
@@ -891,23 +903,51 @@ footer {
 
 
 /* Estilos generales para los modales */
-.modal {
+.usuarioModal {
   display: none; /* Oculto por defecto */
   position: absolute;
   top: 50px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
-  right: 100px;
   transform: translateX(-50%);
-  width: 250px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   border-radius: 5px;
+
+  
+}
+.favoritosModal {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 50px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+
+  
+}
+.carritoModal {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 50px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+
+  
 }
 
 /* Estilo para el triángulo debajo del modal */
-.modal::before {
+#favoritosModal::before {
   content: "";
   position: absolute;
   top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
@@ -918,17 +958,128 @@ footer {
   border-color: transparent transparent white transparent;
 }
 
-/* Especificación de posición para cada modal */
-#carritoModal {
-  top: 60px;
+#carritoModal::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
 }
 
+
+/* Especificación de posición para cada modal */
+#carritoModal {
+
+  top: 100px;
+  left: 85%;}
+
 #favoritosModal {
-  top: 60px;
+
+  top: 100px;
+  left: 85%;}
+
+#usuarioModal::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 503px;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
 }
 
 #usuarioModal {
-  top: 60px;
+  top: 100px;
+  left: 85%;
+  width: 550px;
+  height: 300px;
+  padding:20px 50px 0px 50px;
+}
+
+.modal-content h2 {
+  font-family: Helvetica;
+  letter-spacing: 0.06em;
+  margin-top: 20px;
+
+}
+
+#usuarioModal p {
+  font-family: Montserrat;
+  font-size: medium;
+}
+
+#usuarioModal .modal-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+#usuarioModal .modal-content div{
+  display: flex;
+  flex-direction: column;
+}
+
+#usuarioModal form{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  align-items: center;
+
+  font-family: Montserrat;
+}
+
+#usuarioModal form button{
+  margin-top: 50px;
+  width: 200px;
+  height: 30px;
+  border-radius: 100px;
+  border: 2px #E05840;
+  background-color: white;
+  font-family: Montserrat;
+font-weight: 500;
+
+  border-style: solid;
+  transition: 0.2s ease-in-out;
+
+}
+
+#usuarioModal form button:hover{
+  color: white;
+  background-color: #E05840;
+  transition: 0.2s ease-in-out;
+}
+
+#usuarioModal form label:last-of-type{
+  margin-top: 20px;
+}
+
+ .close-btn{
+  width: px;
+  font-family: Montserrat;
+  background-color: white;
+  font-size: medium;
+  border: 0;
+
+  position: relative;
+  right: 40px;
+  top: 245px;
+}
+
+.close-btn:hover{
+  color: #E05840;
+}
+
+
+#usuarioModal input{
+  width: 200px;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 0px;
 }
 
 /* Efecto para mostrar el modal solo al pasar el ratón */
@@ -936,4 +1087,48 @@ footer {
 
 .modal-content h2 {
   margin-top: 0;
+}
+
+
+/* Show the modal when the class "visible" is added */
+.visible {
+  display: block;
+}
+
+
+.modal{
+    top: 100px;
+    left: 85%;
+    width: 550px;
+    min-height: 300px;
+    padding:20px 50px 0px 50px;
+  
+}
+
+#carritoModal .modal-content{
+display: flex;
+justify-content: space-between;
+}
+
+#favoritosModal .modal-content{
+  height: 278px;
+
+  
+  display: flex;
+  flex-direction: column;
+
+}
+
+#favoritosModal .modal-content div{
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #919191;
+}
+
+#favoritosModal img{
+  width: 100px;
 }
