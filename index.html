@@ -61,7 +61,7 @@
                 <a class="simbolito" href="#" onmouseover="openModalFavoritos()" onmouseout="closeModalFavoritos()">
                     <img id="fav" src="img/favoritos.png" alt="favoritos">
                 </a>
-                <div class="modal" id="favoritosModal">
+                <div class="modal" id="favoritosModal" onmouseover="openModalFavoritos()" onmouseout="closeModalFavoritos()">
                     <div class="modal-content">
                         <h2>Favoritos</h2>
                         <p>Lista de tus artículos favoritos.</p>
@@ -69,10 +69,10 @@
                 </div>
             
                 <!-- Icono de usuario -->
-                <a class="simbolito" href="#" onclick="openModalUsuario()" onclick="closeModalUsuario()">
+                <a class="simbolito" href="#" onclick="openModalUsuario()">
                     <img id="user" src="img/user.png" alt="usuario">
                 </a>
-                <div class="modal" id="usuarioModal">
+                <div class="modal" id="usuarioModal" >
                     <div class="modal-content">
                         <button class="close-btn" onclick="closeModalUsuario()">×</button>
                         <h2>Perfil de Usuario</h2>

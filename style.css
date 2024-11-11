@@ -894,10 +894,10 @@ footer {
 .modal {
   display: none; /* Oculto por defecto */
   position: absolute;
-  top: 50px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
-  right: 100px;
+  top: 90px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  right: 0px;
   transform: translateX(-50%);
-  width: 250px;
+  width: 400px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 15px;
@@ -911,7 +911,7 @@ footer {
   content: "";
   position: absolute;
   top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
-  left: 50%;
+  left: 90%;
   transform: translateX(-50%);
   border-width: 0 10px 10px 10px;
   border-style: solid;
@@ -920,7 +920,6 @@ footer {
 
 /* Especificación de posición para cada modal */
 #carritoModal {
-  top: 60px;
 }
 
 #favoritosModal {
@@ -928,7 +927,9 @@ footer {
 }
 
 #usuarioModal {
-  top: 60px;
+  top: 100px;
+  left: 1700px;
+  width: 400px;
 }
 
 /* Efecto para mostrar el modal solo al pasar el ratón */
