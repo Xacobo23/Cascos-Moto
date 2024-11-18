@@ -26,67 +26,22 @@
             </fieldset>
             <div id="simbolitos">
                 <!-- Icono de carrito -->
-                <a class="simbolito" href="#" onmouseover="openModalCarrito()" onmouseout="closeModalCarrito()">
+                <a class="simbolito" href="#" onclick="toggleModalCarrito()">
                     <img id="carrito" src="img/carrito.png" alt="carrito">
                 </a>
-                <div class="modal" id="carritoModal" onmouseover="openModalCarrito()"  onmouseout="closeModalCarrito()">
-                    <div class="modal-content">
-                        <h2>Carrito</h2>
-                        <form id="carritoForm">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" required>
-            
-                            <label for="people">Número de personas:</label>
-                            <select id="people" name="people" required>
-                                <option value="1">1 Persona</option>
-                                <option value="2">2 Personas</option>
-                                <option value="3">3 Personas</option>
-                                <option value="4">4 Personas</option>
-                                <option value="5">5 Personas</option>
-                                <option value="6">6 Personas</option>
-                            </select>
-            
-                            <label for="date">Fecha:</label>
-                            <input type="date" id="date" name="date" required>
-            
-                            <label for="time">Hora:</label>
-                            <input type="time" id="time" name="time" required>
-            
-                            <button id="reserva-btn" type="submit">Reservar</button>
-                        </form>
-                    </div>
-                </div>
-            
+
+
                 <!-- Icono de favoritos -->
-                <a class="simbolito" href="#" onmouseover="openModalFavoritos()" onmouseout="closeModalFavoritos()">
+                <a class="simbolito" href="#" onclick="toggleModalFavoritos()">
                     <img id="fav" src="img/favoritos.png" alt="favoritos">
                 </a>
-                <div class="modal" id="favoritosModal" onmouseover="openModalFavoritos()" onmouseout="closeModalFavoritos()">
-                    <div class="modal-content">
-                        <h2>Favoritos</h2>
-                        <p>Lista de tus artículos favoritos.</p>
-                    </div>
-                </div>
-            
+
+
                 <!-- Icono de usuario -->
-                <a class="simbolito" href="#" onclick="openModalUsuario()">
+                <a class="simbolito" href="#" onclick="toggleModalUsuario()">
                     <img id="user" src="img/user.png" alt="usuario">
                 </a>
-                <div class="modal" id="usuarioModal" >
-                    <div class="modal-content">
-                        <button class="close-btn" onclick="closeModalUsuario()">×</button>
-                        <h2>Perfil de Usuario</h2>
-                        <form id="usuarioForm">
-                            <label for="username">Nombre de usuario:</label>
-                            <input type="text" id="username" name="username" required>
-            
-                            <label for="email">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required>
-            
-                            <button id="guardar-btn" type="submit">Guardar</button>
-                        </form>
-                    </div>
-                </div>
+
             </div>
 
         </div>
@@ -124,6 +79,80 @@
     </header>
 
     <main id="centro">
+        <div>
+            <div class="carritoModal modal" id="carritoModal">
+                <button class="close-btn" onclick="toggleModalCarrito()">x cerrar</button>
+
+                <div class="modal-content">
+
+                    <h2>Tu Carrito</h2>
+
+                    <div id="listaProductos">
+                        <div>
+
+                            <div class="card">
+                                <img src="img/shoei-casque-integral-gt-air2-tesseract-tc1.jpg" alt="Imagen del producto"
+                                    class="product-image">
+                                <div>
+                                    <div class="product-title">Casco <span>SHOEI</span></div>
+                                    <div class="subtotal">Subtotal: 399,00€</div>
+                                    <div id="unidades">
+                                        <button>-</button>
+                                        <p>1</p>
+                                        <button>+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="texto">
+                            <div id="condiciones">
+                                <a href="">Condiciones de envío</a>
+                            </div>
+                            <div id="totalCarrito">
+                                <strong>Total:</strong> <span id="totalPrice">399,00€</span>
+                            </div>
+                        </div>
+                        <button class="button_checkout">FINALIZAR COMPRA</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="favoritosModal modal" id="favoritosModal">
+                <div class="modal-content">
+                    <h2>Favoritos</h2>
+                    <div>
+                        <img src="img/favorito.svg" alt="">
+                        <p>No hay nada en la lista de favoritos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="usuarioModal modal" id="usuarioModal">
+                <button class="close-btn" onclick="toggleModalUsuario()">x cerrar</button>
+
+                <div class="modal-content">
+                    <div>
+                        <h2>Inicia sesión</h2>
+                        <p>Introduce tus datos para entrar en tu <br> página personal</p>
+                    </div>
+                    <form id="usuarioForm">
+                        <div>
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="username">Contraseña:</label>
+                            <input type="password" id="username" name="username" required>
+
+                        </div>
+
+                        <button id="entrar-btn" type="submit">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
 
 
         </section>
@@ -953,27 +982,38 @@
         });
     });
 
-    function openModalCarrito() {
-        document.getElementById("carritoModal").style.display = "block";
+
+    function toggleModalUsuario() {
+        // Ocultamos el modal de carrito si está visible
+        document.getElementById("carritoModal").classList.remove("visible");
+
+        // Ocultamos el modal de favoritos si está visible
+        document.getElementById("favoritosModal").classList.remove("visible");
+
+        // Alternamos la visibilidad del modal de usuario
+        document.getElementById("usuarioModal").classList.toggle("visible");
     }
 
-    function closeModalCarrito() {
-        document.getElementById("carritoModal").style.display = "none";
+    function toggleModalCarrito() {
+        // Ocultamos el modal de usuario si está visible
+        document.getElementById("usuarioModal").classList.remove("visible");
+
+        // Ocultamos el modal de favoritos si está visible
+        document.getElementById("favoritosModal").classList.remove("visible");
+
+        // Alternamos la visibilidad del modal del carrito
+        document.getElementById("carritoModal").classList.toggle("visible");
     }
 
-    function openModalFavoritos() {
-        document.getElementById("favoritosModal").style.display = "block";
+    function toggleModalFavoritos() {
+        // Ocultamos el modal de usuario si está visible
+        document.getElementById("usuarioModal").classList.remove("visible");
+
+        // Ocultamos el modal de carrito si está visible
+        document.getElementById("carritoModal").classList.remove("visible");
+
+        // Alternamos la visibilidad del modal de favoritos
+        document.getElementById("favoritosModal").classList.toggle("visible");
     }
 
-    function closeModalFavoritos() {
-        document.getElementById("favoritosModal").style.display = "none";
-    }
-
-    function openModalUsuario() {
-        document.getElementById("usuarioModal").style.display = "block";
-    }
-
-    function closeModalUsuario() {
-        document.getElementById("usuarioModal").style.display = "none";
-    }
 </script>

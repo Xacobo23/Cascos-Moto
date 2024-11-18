@@ -44,7 +44,7 @@ fieldset {
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
   position: relative;
-  
+
 
 }
 
@@ -129,13 +129,21 @@ fieldset {
 }
 
 
-#botones{
+#botones {
   display: flex;
   justify-content: center;
 }
 
 #divHeaderBottom {
   display: flex;
+}
+
+#divHeaderBottom button {
+  transition: 0.2s;
+}
+
+#divHeaderBottom button:hover {
+  transition: 0.2s;
 }
 
 .simbolito {
@@ -154,15 +162,17 @@ fieldset {
   background-color: #E05840;
 }
 
-#carrito{
+#carrito {
   width: 30px;
   height: 30px;
 }
-#fav{
+
+#fav {
   width: 30px;
   height: 30px;
 }
-#user{
+
+#user {
   width: 30px;
   height: 30px;
 }
@@ -263,12 +273,12 @@ fieldset button {
   border: 2px #E05840;
   background-color: white;
   font-family: Montserrat;
-font-weight: 500;
+  font-weight: 500;
 
   border-style: solid;
 }
 
-fieldset button:hover{
+fieldset button:hover {
   background-color: #E05840;
   color: white;
 }
@@ -368,6 +378,7 @@ article {
 
 article h4 {
   font-family: Helvetica, sans-serif;
+  letter-spacing: 0.25em;
   text-align: center;
   font-weight: 500;
 
@@ -527,11 +538,15 @@ section article {
   border: 2px #E05840 solid;
 
   font-family: Montserrat;
-font-weight: 500;
+  font-weight: 500;
+  transition: 0.3s;
+
 }
-.filter-toggle:hover{
+
+.filter-toggle:hover {
   background-color: #E05840;
   color: white;
+  transition: 0.3s;
 }
 
 #filtro>img {
@@ -715,7 +730,7 @@ body {
 }
 
 .footer_a:hover {
-  background-color: #E05840 ;
+  background-color: #E05840;
 }
 
 #footerIconos {
@@ -891,45 +906,200 @@ footer {
 
 
 /* Estilos generales para los modales */
-.modal {
-  display: none; /* Oculto por defecto */
+.usuarioModal {
+  display: none;
+  /* Oculto por defecto */
   position: absolute;
-  top: 90px; /* Ajusta esta distancia para colocar el modal justo debajo del icono */
-  right: 0px;
+  top: 50px;
+  /* Ajusta esta distancia para colocar el modal justo debajo del icono */
   transform: translateX(-50%);
-  width: 400px;
   background-color: white;
   border: 1px solid #ccc;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   border-radius: 5px;
+
+
+}
+
+.favoritosModal {
+  display: none;
+  /* Oculto por defecto */
+  position: absolute;
+  top: 50px;
+  /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+
+
+}
+
+.carritoModal {
+  display: none;
+  /* Oculto por defecto */
+  position: absolute;
+  top: 50px;
+  /* Ajusta esta distancia para colocar el modal justo debajo del icono */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 5px;
+  height: 450px;
+
+}
+
+.carritoModal button {
+  top: 400px;
 }
 
 /* Estilo para el triángulo debajo del modal */
-.modal::before {
+#favoritosModal::before {
   content: "";
   position: absolute;
-  top: -10px; /* Ajusta para colocar el triángulo en el borde del modal */
-  left: 90%;
+  top: -10px;
+  /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 77%;
   transform: translateX(-50%);
   border-width: 0 10px 10px 10px;
   border-style: solid;
   border-color: transparent transparent white transparent;
 }
 
+#carritoModal::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 62%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+
 /* Especificación de posición para cada modal */
 #carritoModal {
+
+  top: 100px;
+  left: 85%;
 }
 
 #favoritosModal {
-  top: 60px;
+
+  top: 100px;
+  left: 85%;
+}
+
+#usuarioModal::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  /* Ajusta para colocar el triángulo en el borde del modal */
+  left: 503px;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
 }
 
 #usuarioModal {
   top: 100px;
-  left: 1700px;
-  width: 400px;
+  left: 85%;
+  width: 550px;
+  height: 300px;
+  padding: 20px 50px 0px 50px;
+}
+
+.modal-content h2 {
+  font-family: Helvetica;
+  letter-spacing: 0.06em;
+  margin-top: 20px;
+
+}
+
+#usuarioModal p {
+  font-family: Montserrat;
+  font-size: medium;
+}
+
+#usuarioModal .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+#usuarioModal .modal-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+#usuarioModal form {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  align-items: center;
+
+  font-family: Montserrat;
+}
+
+#usuarioModal form button {
+  margin-top: 50px;
+  width: 200px;
+  height: 30px;
+  border-radius: 100px;
+  border: 2px #E05840;
+  background-color: white;
+  font-family: Montserrat;
+  font-weight: 500;
+
+  border-style: solid;
+  transition: 0.2s ease-in-out;
+
+}
+
+#usuarioModal form button:hover {
+  color: white;
+  background-color: #E05840;
+  transition: 0.2s ease-in-out;
+}
+
+#usuarioModal form label:last-of-type {
+  margin-top: 20px;
+}
+
+.close-btn {
+  width: px;
+  font-family: Montserrat;
+  background-color: white;
+  font-size: medium;
+  border: 0;
+
+  position: relative;
+  right: 40px;
+  top: 245px;
+}
+
+.close-btn:hover {
+  color: #E05840;
+}
+
+
+#usuarioModal input {
+  width: 200px;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 0px;
 }
 
 /* Efecto para mostrar el modal solo al pasar el ratón */
@@ -937,4 +1107,208 @@ footer {
 
 .modal-content h2 {
   margin-top: 0;
+}
+
+
+/* Show the modal when the class "visible" is added */
+.visible {
+  display: block;
+}
+
+
+.modal {
+  top: 100px;
+  left: 85%;
+  width: 550px;
+  min-height: 300px;
+  padding: 20px 50px 0px 50px;
+
+}
+
+#carritoModal .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#favoritosModal .modal-content {
+  height: 278px;
+
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#favoritosModal .modal-content div {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #919191;
+}
+
+#favoritosModal img {
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+.card {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Calibri;
+}
+
+#unidades {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #000 solid 1px;
+  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+}
+
+
+#unidades button {
+  border: 0;
+  width: 30px;
+  height: 100%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+
+}
+
+#unidades button:hover {
+  background-color: #E05840;
+  color: #fff;
+
+}
+
+.product-image {
+  width: 130px;
+  display: block;
+
+}
+
+.product-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: Montserrat;
+}
+
+.product-title span {
+  letter-spacing: 0.15em;
+  margin-left: 5px;
+}
+
+.product-description {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.subtotal {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #919191;
+
+}
+
+#totalCarrito {
+  margin-top: 20px;
+  display: flex;
+  justify-self: end;
+  justify-content: space-around;
+  font-family: Calibri;
+  font-size: x-large;
+  width: 180px;
+}
+
+.carritoModal a{
+    font-family: Calibri;
+    font-size: large;
+    width: 180px;
+    display: flex;
+    align-self: end;
+}
+
+#texto{
+  display: flex;
+  justify-content: space-between;
+}
+
+#condiciones{
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-self: end;
+  justify-content: space-around;
+  font-family: Calibri;
+  font-size: x-large;
+  width: 180px;
+}
+
+.button_checkout {
+  width: 180px;
+  height: 50px;
+  border-radius: 100px;
+  border: 2px #E05840;
+  background-color: white;
+  font-family: Montserrat;
+  font-weight: 500;
+  margin-top:20px;
+  border-style: solid;
+  display: flex;
+  justify-self: end;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_checkout:hover {
+  background-color: #E05840;
+  color: white;
+}
+
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.button.cart {
+  background-color: #ffc107;
+}
+
+.button.checkout {
+  background-color: #000;
 }
