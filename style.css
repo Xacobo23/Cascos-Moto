@@ -726,11 +726,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px;
-
+  transition: 0.2s;
 }
 
 .footer_a:hover {
   background-color: #E05840;
+  transition: 0.2s;
 }
 
 #footerIconos {
@@ -1253,6 +1254,7 @@ footer {
     width: 180px;
     display: flex;
     align-self: end;
+    color: #000;
 }
 
 #texto{
@@ -1285,11 +1287,13 @@ footer {
   justify-self: end;
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
 }
 
 .button_checkout:hover {
   background-color: #E05840;
   color: white;
+  transition: 0.2s;
 }
 
 
